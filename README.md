@@ -57,14 +57,26 @@ Teams pagina van The Voice of Holland
 <details>
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
-### de hele pagina: 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+### de home pagina: 
+<img src="images/tvoh_home_breakdown_schets_1.png" width="375px" alt="breakdown van de home pagina">
+
+### de home pagina - close-up boven: 
+<img src="images/tvoh_home_breakdown_schets_2.png" width="375px" alt="breakdown van de home pagina - close-up boven">
+
+### de home pagina - close-up onder: 
+<img src="images/tvoh_home_breakdown_schets_3.png" width="375px" alt="breakdown van de home pagina - close-up onder">
 
 ### dynamisch deel (bijv menu): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+<img src="images/tvoh_menu_breakdown_schets_4.png" width="375px" alt="breakdown van het hamburger menu">
 
-### wellicht nog een dynamisch deel (bijv filter): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+### de team pagina: 
+<img src="images/tvoh_teams_breakdown_schets_5.png" width="375px" alt="breakdown van de team pagina">
+
+### de team pagina - close-up: 
+<img src="images/tvoh_teams_breakdown_schets_6.png" width="375px" alt="breakdown van de team pagina - close-up">
+
+### de aanmeldpagina: 
+<img src="images/tvoh_aanmelden_breakdown_schets_7.png" width="375px" alt="de aanmeldpagina">
 
 </details>
 
