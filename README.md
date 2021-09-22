@@ -40,11 +40,11 @@ https://www.thevoiceofholland.com/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 Home pagina van The Voice of Holland 
-<img src="images/thevoiceofholland_mobile_home.png" width="375px" alt="home pagina">
+<img src="media/thevoiceofholland_mobile_home.png" width="375px" alt="home pagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Teams pagina van The Voice of Holland
-<img src="images/thevoiceofholland_mobile_teams.png" width="375px" alt="teams pagina">
+<img src="media/thevoiceofholland_mobile_teams.png" width="375px" alt="teams pagina">
  
 </details>
 
@@ -58,25 +58,25 @@ Teams pagina van The Voice of Holland
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de home pagina: 
-<img src="images/tvoh_home_breakdown_schets_1.png" width="375px" alt="breakdown van de home pagina">
+<img src="media/tvoh_home_breakdown_schets_1.png" width="375px" alt="breakdown van de home pagina">
 
 ### de home pagina - close-up boven: 
-<img src="images/tvoh_home_breakdown_schets_2.png" width="375px" alt="breakdown van de home pagina - close-up boven">
+<img src="media/tvoh_home_breakdown_schets_2.png" width="375px" alt="breakdown van de home pagina - close-up boven">
 
 ### de home pagina - close-up onder: 
-<img src="images/tvoh_home_breakdown_schets_3.png" width="375px" alt="breakdown van de home pagina - close-up onder">
+<img src="media/tvoh_home_breakdown_schets_3.png" width="375px" alt="breakdown van de home pagina - close-up onder">
 
 ### dynamisch deel (bijv menu): 
-<img src="images/tvoh_menu_breakdown_schets_4.png" width="375px" alt="breakdown van het hamburger menu">
+<img src="media/tvoh_menu_breakdown_schets_4.png" width="375px" alt="breakdown van het hamburger menu">
 
 ### de team pagina: 
-<img src="images/tvoh_teams_breakdown_schets_5.png" width="375px" alt="breakdown van de team pagina">
+<img src="media/tvoh_teams_breakdown_schets_5.png" width="375px" alt="breakdown van de team pagina">
 
 ### de team pagina - close-up: 
-<img src="images/tvoh_teams_breakdown_schets_6.png" width="375px" alt="breakdown van de team pagina - close-up">
+<img src="media/tvoh_teams_breakdown_schets_6.png" width="375px" alt="breakdown van de team pagina - close-up">
 
 ### de aanmeldpagina: 
-<img src="images/tvoh_aanmelden_breakdown_schets_7.png" width="375px" alt="de aanmeldpagina">
+<img src="media/tvoh_aanmelden_breakdown_schets_7.png" width="375px" alt="de aanmeldpagina">
 
 </details>
 
