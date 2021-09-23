@@ -11,8 +11,8 @@
 
 /* CSS reset */
 *, html {
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 	box-sizing: border-box;
 }
 
@@ -41,7 +41,7 @@ h2 {
   color: var(--primary-text-color);
 }
 
-h3 {
+section:first-of-type h3 {
   padding-left: 1em;
   font-family: var(--secondary-font-family);
   color: var(--primary-text-color);
@@ -51,7 +51,7 @@ h3 {
   align-items: center;
 }
 
-h4 {
+section:last-of-type h3 {
   font-family: var(--primary-font-family);
   color: var(--primary-text-color);
 }
@@ -69,21 +69,23 @@ a {
 
 /* HEADER */
 header {
-  margin: 0 1em 0 1em;
+  margin: 0 1.5em 0 1.5em;
 }
 
 header a > img:first-of-type {
   position: fixed;
   width: 6em;
   top: 1em;
+  z-index: 1;
 }
 
 header nav > button {
   position: fixed;
-  top: 1em;
-  right: 1em;
+  top: 1.5em;
+  right: 1.5em;
   height: 2em;
   width: 2em;
+  z-index: 1;
 }
 
 video {
@@ -97,22 +99,48 @@ video {
 
 /* MAIN */
 main {
-  margin: 0 1em 0 1em;
+  margin: 0 1.5em 0 1.5em;
 }
 
 main section > img:first-of-type {
   position: fixed;
   width: 2.2em;
   top: 6.2em;
-  right: 1em;
+  right: 1.5em;
+  z-index: 1;
 }
 
-main section ul a > h3 {
+main ul {
+  margin: 11em 0 3em 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
 
+main ul li {
+  list-style: none;
+  background-image: url("/media/background-small.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: skew(-6deg) rotate(-6deg);
+}
+
+main ul li:first-of-type {
+  margin-top: 5em;
+}
+
+main ul li:nth-of-type(2) {
+  margin-bottom: 5em;
+}
+
+main ul li:last-of-type {
+  margin: -5em 0 5em 0;
 }
 
 main section ul a > img {
   height: 15em;
+  transform: rotate(6deg) skew(6deg);
 }
 
 /* FOOTER */
