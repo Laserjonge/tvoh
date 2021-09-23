@@ -165,7 +165,7 @@ main ul {
 
 main ul li {
   list-style: none;
-  background-image: url("/media/background-small.jpeg");
+  background-image: url("../media/background-small.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -231,7 +231,7 @@ section:last-of-type button {
   border-radius: .4em;
   /* text-align: right; */
   /* padding-left: 10em; */
-  background-image: url("/media/arrow-button.svg");
+  background-image: url("../media/arrow-button.svg");
   background-repeat: no-repeat;
   background-position: right 1em center;
 }
