@@ -2,24 +2,25 @@
 /* IMPORTS */
 /***********/
 @font-face {
-  font-family: 'trademarker-bolditalic';
+  font-family: 'trademarker-bolditalic', sans-serif;
   src: url('fonts/TradeMarker-BoldItalic.otf');
   }
-
-/****************/
-/* CSS Document */
-/****************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
 
 /*************/
 /* CSS reset */
 /*************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
 *, html {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+
+img {
+  -webkit-user-drag: none;
 }
 
 /*********************/
@@ -46,6 +47,10 @@ body {
   color: var(--primary-text-color);
 }
 
+body.bodyHidden {
+  overflow: hidden;
+}
+
 h2 {
   font-family: var(--primary-font-family);
   color: var(--primary-text-color);
@@ -56,7 +61,8 @@ h2 {
 }
 
 section:first-of-type h3 {
-  position: relative;
+  position: absolute;
+  bottom: -2em;
   padding-left: 1em;
   font-family: var(--secondary-font-family);
   color: var(--primary-text-color);
@@ -65,7 +71,7 @@ section:first-of-type h3 {
   display: flex;
   align-items: center;
   z-index: 2;
-  width: 102%;
+  width: 100%;
 }
 
 section:last-of-type h3 {
@@ -73,6 +79,20 @@ section:last-of-type h3 {
   color: var(--primary-text-color);
   font-size: 1em;
   margin: .8em .5em .8em .8em;
+}
+
+header h3 {
+  font-size: 1.1em;
+  margin: .8em 3em 0 3em;
+  padding-bottom: .8em;
+  color: var(--secondary-text-color);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.active-page {
+  color: var(--primary-text-color);
+  border-bottom: 3px solid var(--tvoh-red);
 }
 
 p {
@@ -93,15 +113,15 @@ header {
   margin: 0 1.5em 0 1.5em;
 }
 
-header a > img:first-of-type {
+header > nav:first-of-type a img {
   position: fixed;
   width: 6em;
   top: 1em;
-  z-index: 1;
+  z-index: 3;
   margin-left: 1.5em;
 }
 
-header nav {
+header > nav:first-of-type {
   position: absolute;
   background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8463760504201681) 100%);
   height: 10em;
@@ -114,12 +134,27 @@ header nav > button {
   position: fixed;
   top: 1.5em;
   right: 1.5em;
-  height: 2em;
-  width: 2em;
+  height: 2.2em;
+  width: 2.2em;
   z-index: 1;
+  background: transparent;
+  border: none;
+}
+
+header nav > button:hover {
+  cursor: pointer;
 }
 
 video {
+  position: absolute;
+  top: -.5em;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+header > img:last-of-type {
   position: absolute;
   top: 0;
   right: 0;
@@ -128,12 +163,66 @@ video {
   z-index: -1;
 }
 
-header > img:last-of-type {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
+header nav:last-of-type {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+header > nav:last-of-type > nav {
+  width: 100%;
+}
+
+header > nav:last-of-type > nav > ul:first-of-type {
+  margin-top: 6.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+header > nav:last-of-type > nav > ul:first-of-type li {
+  width: 100%;
+}
+
+header > nav:last-of-type {
+  background-color: var(--background-color);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-100%);
+  z-index: 1;
+  transition: .3s ease-out;
+  z-index: 2;
+}
+
+header > nav:last-of-type.toonMenu {
+  transform: translateY(0%);
+}
+
+header nav > nav > a:last-of-type {
+  margin-top: -1em;
+  font-size: .9em;
+  font-weight: 700;
+}
+
+header nav nav p {
+  margin-top: .5em;
+  font-size: .9em;
+  font-weight: 700;
+}
+
+/* header > nav:last-of-type > nav:last-of-type {
+
+} */
 
 /********/
 /* MAIN */
@@ -147,30 +236,56 @@ main {
 main section > img:first-of-type {
   position: relative;
   width: 2.2em;
-  top: 7.5em;
+  top: 4.5em;
   display: block;
   margin: 0 1.5em 0 auto;
 }
 
 main ul {
   position: relative;
-  margin: 11em 0 3em 0;
+  margin: 7.3em 1.5em 3em 1.5em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 8%);
+  transition: .5s;
+  padding: none;
+}
+
+main ul:hover li {
+  filter: grayscale(1);
+  transform: skew(-6deg) rotate(-6deg) scale(.95);
+}
+
+main ul li:hover {
+  filter: grayscale(0);
+  transform: skew(-6deg) rotate(-6deg) scale(1.02);
+}
+
+div {
+  position: absolute;
   width: 100%;
-  padding: 0 1.5em 0 1.5em;
+  height: 15em;
+  background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.89));
+  z-index: 1;
+  opacity: 1;
+  transition: .5s;
+}
+
+main li:hover div {
+  opacity: 0;
 }
 
 main ul li {
+  height: 15em;
+  margin-bottom: 2.5em;
   list-style: none;
   background-image: url("../media/background-small.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   transform: skew(-6deg) rotate(-6deg);
-  overflow: hidden;
+  transition: .5s;
+  
 }
 
 main ul li:first-of-type {
@@ -197,11 +312,10 @@ main section ul a {
 
 main section ul a > img {
   padding-left: 1em;
-  background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.89));
-  width: 102%;
+  height: 14em;
   margin: 1em 0 -1em 0;
   transform: rotate(6deg) skew(6deg);
-  z-index: 1;
+  z-index: 2;
 }
 
 /* VIDEO'S */
@@ -229,11 +343,13 @@ section:last-of-type button {
   text-transform: uppercase;
   border: .25em solid var(--border-color);
   border-radius: .4em;
-  /* text-align: right; */
-  /* padding-left: 10em; */
   background-image: url("../media/arrow-button.svg");
   background-repeat: no-repeat;
   background-position: right 1em center;
+}
+
+section:last-of-type button:hover {
+  cursor: pointer;
 }
 
 /**********/
@@ -246,9 +362,11 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* z-index: 6; */
 }
 
 footer > img:first-of-type {
+  /* height: 4em; */
   width: 100%;
   position: absolute;
   top: 0;
@@ -259,14 +377,15 @@ footer > img:nth-of-type(2) {
   z-index: 1;
 }
 
-footer ul {
+footer ul, header nav:last-of-type nav ul:last-of-type {
   display: flex;
   justify-content: center;
   list-style-type: none;
 }
 
-footer li a {
+footer li a, header nav:last-of-type nav nav:last-of-type li a {
   margin: 2em .5em 2em .5em;
+  position: relative;
   width: 2.5em;
   height: 2.5em;
   border: 1px solid var(--border-color);
@@ -276,18 +395,18 @@ footer li a {
   align-items: center;
 }
 
-footer nav img {
+footer nav img, header nav:last-of-type nav:last-of-type img {
   display: flex;
   justify-content: center;
   align-items: center;
   height: .9em;
 }
 
-footer li:nth-of-type(2) img {
+footer li:nth-of-type(2) img, header nav:last-of-type li:nth-of-type(2) img  {
   height: .7em;
 }
 
-footer li:nth-of-type(3) img {
+footer li:nth-of-type(3) img, header nav:last-of-type li:nth-of-type(3) img {
   height: .6em;
 }
 
