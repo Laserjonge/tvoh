@@ -11,7 +11,7 @@ function toggleMenu(event) {
   deNav = document.querySelector("header > nav:last-of-type");
   deBody = document.querySelector("body");
   deNav.classList.toggle("toonMenu");
-  // deBody.classList.toggle("bodyHidden");
+  deBody.classList.toggle("bodyHidden");
   console.log("test");
 }
 
@@ -26,8 +26,9 @@ coachButtons.forEach(function(toggleHoverFunction){
 
 var topNav = document.querySelector("header nav:first-of-type");
 var rtlLogo = document.querySelector("main section section");
-var tvohLogoSmall = document.querySelector("header > nav:first-of-type a img");
-var tvohLogoBig = document.querySelector("header > nav:first-of-type a img");
+var tvohLogoSmall = document.querySelector("header a img");
+var tvohLogoBig = document.querySelector("header a img");
+var headerDiv = document.querySelector("header > div");
 
 // Bron: https://www.youtube.com/watch?v=V9CY0F4Wc7M
 window.addEventListener("scroll", () => {
@@ -35,17 +36,19 @@ window.addEventListener("scroll", () => {
   var scrolled = window.scrollY;
 
   console.log(scrolled);
-  if (scrolled > 50) {
+  if (scrolled > 90) {
     console.log("testje");
     topNav.classList.add("nav-gradient");
     rtlLogo.classList.add("nav-gradient");
     tvohLogoSmall.classList.add("nav-gradient");
     tvohLogoBig.classList.add("nav-gradient");
+    headerDiv.classList.add("nav-gradient");
   } else {
     topNav.classList.remove("nav-gradient");
     rtlLogo.classList.remove("nav-gradient");
     tvohLogoSmall.classList.remove("nav-gradient");
     tvohLogoBig.classList.remove("nav-gradient");
+    headerDiv.classList.remove("nav-gradient");
   }
 });
 
