@@ -1108,6 +1108,10 @@ main section ul a div > img {
   z-index: 2;
 }
 
+.home-page section:last-of-type div a p {
+  bottom: 7.6em;
+}
+
   /* MAIN AANMELDEN - LARGE SCREENS */
   .aanmelden-page main div {
     margin: 26.5em 1.5em 0em 1.5em;
