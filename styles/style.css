@@ -92,16 +92,13 @@ header > a img {
   margin-left: 1.5em;
   transition: .3s ease;
   z-index: 3;
+  outline: none;
+  outline: none;
 }
 
-header a:focus img {
+header a:focus-visible img {
   outline: 1px dotted #212121;
   outline: 5px auto -webkit-focus-ring-color;
-}
-
-header a:active img {
-  outline: none;
-  outline: 0 auto -webkit-focus-ring-color;
 }
 
 header a img.nav-gradient {
@@ -704,6 +701,23 @@ footer p {
   /* MAIN AANMELDEN - SMALL SCREENS */
   .aanmelden-page section:last-of-type div a p {
     display: inline-block;
+    height: 3.2em;
+    overflow: hidden;
+  }
+
+  .aanmelden-page main div h3 {
+    top: .4em;
+    width: 45%;
+    line-height: 2em;
+    display: block;
+    hyphens: auto;
+    white-space: normal;
+    overflow: hidden;
+  }
+
+  .aanmelden-page main div p {
+    height: 3.2em;
+    overflow: hidden;
   }
 }
 
